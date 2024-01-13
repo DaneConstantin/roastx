@@ -12,7 +12,7 @@ import './_css/app.scss'
 
 const jost = Jost({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['400', '600'],
   variable: '--font-jost',
 })
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
@@ -28,7 +28,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <AdminBar />
           {/* @ts-expect-error */}
           <Header />
-          {children}
+
+          <main>{children}</main>
           {/* @ts-expect-error */}
           <Footer />
         </Providers>
